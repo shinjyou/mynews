@@ -1,11 +1,11 @@
-{{-- layouts/admin.blade.phpを読み込む --}}
+{{-- layouts/profile.blade.phpを読み込む --}}
 @extends('layouts.profile')
 
 
-{{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
+{{-- profile.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
 @section('title', 'profile画面')
 
-{{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+{{-- profile.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="container">
         <div class="row">
@@ -21,31 +21,31 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">氏名(name)</label>
+                        <label class="col-md-2" for="name">氏名(name)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">性別(gender)</label>
+                        <label class="col-md-2" for="gender">性別(gender)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="gender" value="{{ old('gender') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">趣味(hobby)</label>
+                        <label class="col-md-2" for="hobby">趣味(hobby)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="hobby" value="{{ old('hobby') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">自己紹介欄(introduction)</label>
+                        <label class="col-md-2" for="introduction">自己紹介欄(introduction)</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="introduction" rows="20">{{ old('introduction') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">画像</label>
+                        <label class="col-md-2" for="image">画像</label>
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
                         </div>
