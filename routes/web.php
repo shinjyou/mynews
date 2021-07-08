@@ -36,8 +36,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 });
 
 
-
 // 課題１０
 // Route::get('XXX', 'AAAController@bbb');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'NewsController@index');
